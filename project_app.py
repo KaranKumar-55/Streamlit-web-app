@@ -46,11 +46,29 @@ with plot:
     df1=dff.copy()
     st.header("Data Visualization")
     
-    # plot 1
-    fig=plt.figure(figsize=(18,16))
-    fig=px.bar(dff,x='RegionName',y="Amount", title = "Sales by Region")
-    fig.update_traces(marker_color='rgb(0, 0, 85)',marker_line_color='rgb(206, 168, 35)')
-    st.write(fig)    
+    # plot 1    
+    df1['years'] = pd.DatetimeIndex(df1['BillDate']).year
+    sales_region = (
+        df1.groupby(["RegionName", "years"])["NetAmount"]
+        .sum()
+        .reset_index(name="NetAmount")
+    )
+    fig = px.bar(
+        sales_region,
+        x="RegionName",
+        y="NetAmount",
+        color="years",
+        barmode="group",
+        title="Yearly Income of Each Region"
+    )
+    st.write(fig)
+         
+    
+    
+    
+    
+    
+    
     
     # plot 2
     fig=px.bar(df1, x='BillMonth', y='SaleExclGST', title='Profit of Each Month')
@@ -60,7 +78,7 @@ with plot:
         
     # plot 3
     # To show year wise comparison with the net amount of sales, we split the Bill Date to years
-    df1['years'] = pd.DatetimeIndex(df1['BillDate']).year
+    #df1['years'] = pd.DatetimeIndex(df1['BillDate']).year
     #To show the total income of each Day on yearly basis for 2016, 2017 & 2018
     df1['BillDate'] = pd.to_datetime(df1['BillDate'], format='%Y/%m/%d')
     dff = df1.groupby(['years','BillDate'])['NetAmount'].sum().reset_index(name='NetAmount')
