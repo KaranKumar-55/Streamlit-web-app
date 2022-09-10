@@ -19,12 +19,12 @@ with header:
     st.markdown(""" 
                 
                - People express their character identification in unique ways and the most important manner is apparel. Someone’s self-notion is pondered via his clothing and brand preferences, and it indicates how a person would like to be.
-               - In the last few decades and as a result, many national and international brands have evolved in Pakistan.
+               - In the last few decades many national and international brands have evolved in Pakistan.
                - Entrepreneurs make use of brands as the principal factor of differentiation to the advantage of aggressive benefit on different competition, gambling being an imperative function in the triumph of companies[1].
                - Clothes today are made from a wide range of different materials. Traditional materials such as cotton, linen and leather are still sourced from plants and animals[2].  
                
                
-               Refrences:
+               References:
                 ---
                [1] Kamran, A., Dawood, M. U., Rafi, S. K., Butt, F. M., & Akhtar, K. (2020). Impact of Brand Name on Purchase Intention: A Study on Clothing in Karachi, Pakistan. International Journal of Innovation, Creativity and Change, 278-293. 
                [2] Objective, C. (2021, December 10). What Are Our Clothes Made From? Retrieved from https://www.commonobjective.co/article/what-are-our-clothes-made-from            
